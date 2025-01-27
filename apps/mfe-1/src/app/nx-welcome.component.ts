@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-nx-welcome',
   imports: [CommonModule],
   template: `
-    <h1>Hello i am the text from the shell component</h1>
+    Hello i am the text from the micro-frontend 1
   `,
   styles: [],
   encapsulation: ViewEncapsulation.None,
