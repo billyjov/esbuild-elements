@@ -2,13 +2,19 @@
   "name": "@angular-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:mfe1:prod": "nx run mfe-1:build:production",
+    "pack:mfe1": "copyfiles ./dist/apps/mfe-1/browser/main.js ./apps/shell/src/assets/js/mfe-1/ -f -u ",
+    "deploy:mfe1": "npm run build:mfe1:prod && npm run pack:mfe1"
+  },
   "private": true,
   "dependencies": {
+    "@angular-extensions/elements": "^18.2.1",
     "@angular/animations": "~19.0.0",
     "@angular/common": "~19.0.0",
     "@angular/compiler": "~19.0.0",
     "@angular/core": "~19.0.0",
+    "@angular/elements": "~19.0.0",
     "@angular/forms": "~19.0.0",
     "@angular/platform-browser": "~19.0.0",
     "@angular/platform-browser-dynamic": "~19.0.0",
@@ -40,6 +46,7 @@
     "@types/node": "18.16.9",
     "@typescript-eslint/utils": "^8.13.0",
     "angular-eslint": "^19.0.2",
+    "copyfiles": "^2.4.1",
     "cypress": "^13.13.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.0.0",

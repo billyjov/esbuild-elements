@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
@@ -7,6 +7,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+
 })
 export class AppComponent {
   title = 'mfe-1';
